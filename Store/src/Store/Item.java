@@ -60,4 +60,23 @@ public class Item {
         return price;
     }
 
+    /**
+     * Method to print the information about the Item
+     */
+    public void printItemInfo(){
+        System.out.println(toString());
+    }
+
+    /**
+     * toString
+     */
+    @Override
+    public String toString(){
+        String returnThis =
+                "Item-name: " + name
+                + "\nItem-description: " + description
+                + "\nItem-price: " + price;
+        return  returnThis;
+    }
+
 }
