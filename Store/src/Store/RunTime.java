@@ -14,6 +14,11 @@ public class RunTime {
         double tempPrice = keybd.nextDouble();
         Item tempItem  = new Item(tempName, tempDes, tempPrice);
         tempItem.printItemInfo();
+        System.out.println("Now we will make an inventory for the store.");
+        System.out.print("Please enter in how many items are in the inventory: ");
+        int tempStock = keybd.nextInt();
+        Inventory tempInventoryItem = new Inventory(tempItem, tempStock);
+        tempInventoryItem.printInventoryInfo();
     }
 
 }

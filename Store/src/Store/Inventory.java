@@ -9,6 +9,10 @@ public class Inventory {
     /**
      * Constructor
      */
+    public Inventory(Item tempItem, int tempStock){
+        inventoryItem = tempItem;
+        stock = tempStock;
+    }
 
     // Methods
 
@@ -36,6 +40,19 @@ public class Inventory {
     /**
      * Method to get information about the inventoryItem
      */
-    public static void 
+    public void printInventoryInfo(){
+        System.out.print(toString());
+    }
+
+    /**
+     * toString
+     */
+    @Override
+    public String toString(){
+        String returnThis =
+                inventoryItem.toString()
+                + "\nStock: $" + stock;
+        return returnThis;
+    }
 
 }
