@@ -12,6 +12,9 @@ public class Store {
     /**
      * Constructor
      */
+    public Store(){
+        storeItems = new ArrayList <Inventory> ();
+    }
 
     // Methods
 
@@ -60,7 +63,20 @@ public class Store {
     }
 
     /**
-     * Method to add a 
+     * Method to set an existing inventoryItem to the storeItems list
      */
+    public static void setNewiItem(Inventory iItem){
+        storeItems.add(iItem);
+    }
+
+    /**
+     * Method to print all the items in the storeItems list
+     */
+    public static void printAllItems(){
+        Inventory tempItem = null;
+        for (int tempNum = 0; tempNum <= storeItems.size(); tempNum++){
+            tempItem = storeItems.get(tempNum);
+        }
+    }
 
 }
